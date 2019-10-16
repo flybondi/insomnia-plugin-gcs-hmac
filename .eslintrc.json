@@ -1,13 +1,11 @@
 {
-  "parser": "babel-eslint",
   "extends": [
     "standard",
     "plugin:ramda/recommended",
-    "plugin:flowtype/recommended",
     "prettier/standard",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["flowtype", "ramda"],
+  "plugins": ["ramda"],
   "parserOptions": {
     "sourceType": "script"
   },

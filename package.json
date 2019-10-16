@@ -25,6 +25,10 @@
   "insomnia": {
     "name": "gcshmac"
   },
+  "scripts": {
+    "lint": "eslint index.js",
+    "prettier": "prettier --write index.js"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.2.0",
     "commitlint": "^8.2.0",
@@ -45,8 +49,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -e $GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "run-s test"
+      "pre-commit": "lint-staged"
     }
   },
   "commitlint": {

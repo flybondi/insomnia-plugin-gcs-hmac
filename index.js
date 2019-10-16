@@ -7,7 +7,7 @@
  * @module @flybondi/insomnia-plugin-gcs-hmac
  */
 const crypto = require('crypto');
-const url = require('url');
+const { URL } = require('url');
 
 const templateTags = [
   {
@@ -79,7 +79,7 @@ const templateTags = [
           .map(h => `${h.name.trim().toLowerCase()}:${h.value.trim()}`)
           .sort()
           .join('\n'),
-        url.parse(request.url).pathname
+        new URL(request.url).pathname
       ].join('\n');
 
       const signature = crypto
