@@ -67,5 +67,34 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "release": {
+    "branch": "master",
+    "prepare": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json"
+        ],
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ],
+    "verifyConditions": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ],
+    "analyzeCommits": {
+      "path": "@semantic-release/commit-analyzer",
+      "preset": "angular"
+    },
+    "publish": [
+      {
+        "path": "@semantic-release/npm"
+      },
+      {
+        "path": "@semantic-release/github"
+      }
+    ]
   }
 }
