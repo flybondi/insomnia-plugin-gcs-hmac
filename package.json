@@ -1,6 +1,6 @@
 {
   "name": "@flybondi/insomnia-plugin-gcs-hmac",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Insomnia Ingenico GCS HMAC template tag",
   "main": "index.js",
   "keywords": [
